@@ -15,15 +15,8 @@
 		"128": "icon.png"
 	},
 	"permissions": [
-		"management",
 		"storage"
 	],
-	"options_ui": {
-		"chrome_style": true,
-		"browser_style": true,
-		"page": "options/main.html"
-	},
-	"options_page": "options/main.html",
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_title": "Comment Screen",
