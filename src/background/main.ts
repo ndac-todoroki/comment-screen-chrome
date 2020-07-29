@@ -3,6 +3,7 @@ import { browser } from "webextension-polyfill-ts";
 // import '../options-storage/main';
 import { decode, decodeAsync } from "@msgpack/msgpack";
 import { v4 as uuid } from "uuid";
+import WebSocket from 'reconnecting-websocket';
 
 class Comment {
     readonly id: string;
@@ -69,7 +70,4 @@ class WSClient {
     }
 }
 
-// let socketClient = (url: string) => new WSClient(url);
-// console.info(socketClient);
-// const client = new WSClient("ws://localhost:4000/ws");
 const client = new WSClient("wss://slack-streamer.gigalixirapp.com/ws");
