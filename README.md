@@ -1,6 +1,8 @@
 ## Comment Screen plugin for Chrome
 for chrome (for now)
 
+![スクショ](readme/img/comment-screen_001.gif)
+
 ## How to build
 ```
 npm run build
