@@ -9,7 +9,30 @@ npm run build
 npm run build
 ```
 
-Run two times, since the current configuration copies the css first, then builds the svelte files into individual css files.
+- ビルド先ディレクトリに静的ファイルをコピーする
+- SvelteのJSXをJSとCSSにコンパイルする
+- JSはビルド先ディレクトリにコピーされる
+- 新しいCSSが取り残される
 
+という挙動を示すので、とりあえずビルドコマンドを2回叩く必要があります。  
+Rollup.jsの癖がまだよくわからず……。
 
-メインの処理や描画は Svelte を用いています。
+メインの処理や描画は Svelte + Typescript を用いています。
+
+## ポイント
+
+- Svelteで作られていてファイルサイズが小さい（はず
+- すべてCSSアニメーションで作られている
+  - 本家は `canvas` 要素に描画している
+- なるべくニコニコに寄せた挙動
+  - コメントの表示時間はコメントの長さによらず5秒間
+  - コメントが流れ切るまで皇族のコメントが被らないように配置される
+    - なんか思いっきりTOPのスクショでコメント位置被ってますが基本的には回避するはず
+- どんなサイトの上でもコメントを流せる
+  - Tooltipからオン・オフ切替可能
+  
+## 試し方
+- cloneしてビルド(2回)した `dist` ディレクトリ
+- リリースZIPを解凍してできるディレクトリ
+
+のどちらかをChromeの開発者ツールから開発版拡張として読み込む
