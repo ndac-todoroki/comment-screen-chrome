@@ -22,7 +22,7 @@
   "rollup-plugin-svelte": "^5.2.3",
   "rollup-plugin-terser": "^5.3.0",
   "rollup-plugin-zip": "^1.0.1",
-  "svelte": "^3.24.0",
+  "svelte": "^3.49.0",
   "svelte-loader": "^2.13.6",
   "svelte-preprocess": "^4.0.8",
   "ts-loader": "^8.0.1",
